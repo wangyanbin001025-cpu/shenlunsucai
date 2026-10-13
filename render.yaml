@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: shenlun-material-library-new
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SHENLUN_HOST
+        value: 0.0.0.0
+      - key: SHENLUN_DATA_DIR
+        value: /tmp/shenlun-data
+      - key: TZ
+        value: Asia/Tokyo
+
+# IMPORTANT: In Render Dashboard > Environment, add DATABASE_URL with your external PostgreSQL pooled connection string.
+# Without DATABASE_URL this service falls back to local SQLite, which is ephemeral on Render Free.
