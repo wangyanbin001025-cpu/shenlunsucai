@@ -1,0 +1,17 @@
+{
+  "id": "/",
+  "name": "申论素材库",
+  "short_name": "申论素材库",
+  "description": "公务员考试申论备考素材积累、金句摘录与离线阅读",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f6f7f3",
+  "theme_color": "#183f35",
+  "icons": [
+    {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}

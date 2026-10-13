@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#183f35" />
+  <meta name="description" content="公务员考试申论备考素材库，积累政策观点、论证思路与金句表达。" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="申论素材库" />
+  <title>申论素材库 · 日积月累，落笔有据</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="/icon-192.png" />
+  <link rel="icon" type="image/png" href="/icon-192.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span>申</span><i></i></div>
+        <div><div class="brand-title">申论素材库</div><div class="brand-sub">SHENLUN NOTEBOOK</div></div>
+      </div>
+      <div class="side-label">工作台</div>
+      <nav class="side-nav" aria-label="主导航">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span><span>总览首页</span></button>
+        <button class="nav-item" data-page="topics"><span class="nav-icon">▦</span><span>主题分类</span><span class="nav-count" id="nav-topic-count">8</span></button>
+        <button class="nav-item" data-page="archive"><span class="nav-icon">▤</span><span>历史归档</span></button>
+        <button class="nav-item" data-page="favorites"><span class="nav-icon">♡</span><span>我的收藏</span></button>
+        <button class="nav-item" data-page="offline"><span class="nav-icon">⇩</span><span>离线阅读</span></button>
+      </nav>
+      <div class="side-divider"></div>
+      <div class="side-label">素材管理</div>
+      <nav class="side-nav">
+        <button class="nav-item" id="add-material-nav"><span class="nav-icon">＋</span><span>新增素材</span></button>
+        <button class="nav-item" data-page="updates"><span class="nav-icon">↻</span><span>每日更新</span><span class="status-dot"></span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="side-quote-mark">“</div>
+        <p>好文章要读进去，<br/>好表达要攒下来。</p>
+        <div class="sidebar-bottom-note">把积累变成考场上的底气</div>
+      </div>
+      <div class="sidebar-footer"><span class="footer-leaf">✳</span> 个人备考空间 <span class="version">v1.1</span></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="breadcrumb"><span>备考工作台</span><b>/</b><strong id="breadcrumb-current">总览首页</strong></div>
+        <div class="top-actions">
+          <label class="global-search"><span>⌕</span><input id="global-search-input" type="search" placeholder="搜索标题、观点、金句…" autocomplete="off"/><kbd>Enter</kbd></label>
+          <span class="network-status" id="network-status" aria-live="polite">在线同步</span>
+          <button class="primary-button mobile-add-button" id="mobile-add-btn" title="新增素材">＋ 新增</button>
+          <button class="icon-button" id="import-btn" title="导入素材数据">⇧</button><button class="icon-button" id="export-btn" title="导出素材数据">⇩</button>
+          <button class="user-chip" id="user-chip"><span class="avatar" id="user-avatar">学</span><span id="user-label">登录 / 注册</span><span class="chevron">⌄</span></button>
+        </div>
+      </header>
+
+      <section class="page-view" id="page-home">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR DAILY KNOWLEDGE BASE</div>
+            <h1>把每一次阅读，<em>变成考场上的表达。</em></h1>
+            <p class="welcome-copy">围绕申论高频主题，积累政策观点、典型表达与论证思路。少一点临时拼凑，多一点日常沉淀。</p>
+          </div>
+          <div class="welcome-stamp"><div class="stamp-top">每日积累</div><div class="stamp-number" id="today-date">10<span>/</span>12</div><div class="stamp-bottom">READ · THINK · WRITE</div></div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card stat-primary"><div class="stat-top"><span>素材总量</span><span class="stat-icon">▤</span></div><div class="stat-value" id="stat-total">0<span> 篇</span></div><div class="stat-foot"><span class="stat-mini-dot"></span> 已入库的学习素材</div><div class="stat-watermark">01</div></div>
+          <div class="stat-card"><div class="stat-top"><span>覆盖主题</span><span class="stat-icon icon-soft">▦</span></div><div class="stat-value" id="stat-topics">8<span> 类</span></div><div class="stat-foot">从治理到发展，系统积累</div><div class="stat-watermark light">02</div></div>
+          <div class="stat-card"><div class="stat-top"><span>我的收藏</span><span class="stat-icon icon-rose">♡</span></div><div class="stat-value" id="stat-favorites">0<span> 篇</span></div><div class="stat-foot">重点素材，一键回看</div><div class="stat-watermark light">03</div></div>
+          <div class="stat-card"><div class="stat-top"><span>待整理素材</span><span class="stat-icon icon-amber">◷</span></div><div class="stat-value" id="stat-drafts">0<span> 篇</span></div><div class="stat-foot">核实来源、补齐观点与角度</div><div class="stat-watermark light">04</div></div>
+        </div>
+
+        <div class="section-heading"><div><div class="section-kicker">BROWSE BY TOPIC</div><h2>八大主题，搭建你的申论框架</h2><p>按主题积累观点，写作时更容易调取和组合。</p></div><button class="text-action" data-page="topics">查看全部主题 <span>↗</span></button></div>
+        <div class="topic-grid" id="home-topic-grid"></div>
+
+        <div class="content-columns">
+          <section class="panel latest-panel">
+            <div class="panel-heading"><div><div class="section-kicker">LATEST MATERIALS</div><h2>最近入库</h2></div><button class="small-text-action" data-page="archive">全部素材 <span>→</span></button></div>
+            <div id="latest-list" class="latest-list"></div>
+          </section>
+          <aside class="panel method-panel">
+            <div class="method-top"><span class="method-icon">✳</span><span class="method-label">积累建议</span></div>
+            <h3>从“看过”到“会用”</h3>
+            <p>每篇素材抓住三个动作：提炼观点、标记表达、转换成写作角度。</p>
+            <div class="method-steps"><div><span>01</span><div><b>抓观点</b><small>用一句话说清文章主张</small></div></div><div><span>02</span><div><b>存表达</b><small>记录短句与规范表述</small></div></div><div><span>03</span><div><b>练迁移</b><small>联系题目，形成论证思路</small></div></div></div>
+            <button class="method-button" data-page="updates">查看每日更新任务 <span>→</span></button>
+          </aside>
+        </div>
+        <div class="footer-note">建议将素材转化为自己的表达，并结合题目要求进行取舍。素材仅供学习整理，具体事实请以原始来源为准。</div>
+      </section>
+
+      <section class="page-view hidden" id="page-topics">
+        <div class="page-title-row"><div><div class="eyebrow">TOPIC COLLECTION</div><h1>主题分类</h1><p>从问题领域切入，找到可用于不同题目的观点与表达。</p></div><button class="primary-button" id="topic-add-btn">＋ 整理新素材</button></div>
+        <div class="topic-grid topic-grid-large" id="all-topic-grid"></div>
+        <div class="list-panel"><div class="list-toolbar"><div><h2 id="topic-list-heading">全部主题素材</h2><span class="muted" id="topic-list-count">按发布日期倒序排列</span></div><div class="toolbar-filters"><input id="topic-search" placeholder="在当前主题内搜索"/><select id="topic-sort"><option value="desc">日期：由新到旧</option><option value="asc">日期：由旧到新</option></select></div></div><div id="topic-material-list" class="material-list"></div></div>
+      </section>
+
+      <section class="page-view hidden" id="page-archive">
+        <div class="page-title-row"><div><div class="eyebrow">YOUR READING TIMELINE</div><h1>历史归档</h1><p>按发布日期追踪积累记录，也可以按时间段缩小范围。</p></div><div class="archive-mark">年 · 月 · 日</div></div>
+        <div class="filter-panel"><label>开始日期<input type="date" id="archive-from"/></label><label>结束日期<input type="date" id="archive-to"/></label><label>主题<select id="archive-topic"><option value="">全部主题</option></select></label><button class="primary-button" id="archive-filter-btn">筛选素材</button><button class="ghost-button" id="archive-clear-btn">清空</button></div>
+        <div id="archive-content"></div>
+      </section>
+
+      <section class="page-view hidden" id="page-favorites">
+        <div class="page-title-row"><div><div class="eyebrow">YOUR SAVED NOTES</div><h1>我的收藏</h1><p>把高频考点、优质表达和常用论证集中起来，方便考前复习。</p></div><div class="favorite-emblem">♡</div></div>
+        <div class="list-panel"><div class="list-toolbar"><div><h2>重点素材</h2><span class="muted" id="favorites-count">收藏后会出现在这里</span></div><input id="favorites-search" class="toolbar-search" placeholder="搜索我的收藏"/></div><div id="favorites-list" class="material-list"></div></div>
+      </section>
+
+      <section class="page-view hidden" id="page-offline">
+        <div class="page-title-row"><div><div class="eyebrow">READ WITHOUT NETWORK</div><h1>离线阅读</h1><p>将常用素材保存到当前设备，乘车、候考或网络不稳定时也能打开阅读。离线收藏会在恢复联网后尝试同步。</p></div><div class="favorite-emblem">⇩</div></div>
+        <div class="offline-explainer"><span class="offline-explainer-icon">⌁</span><div><strong>仅保存在这台设备</strong><p>离线素材不会自动出现在其他设备；账号收藏则会在联网时同步。首次使用前，请先在线打开素材库并保存需要复习的文章。</p></div></div>
+        <div class="list-panel"><div class="list-toolbar"><div><h2>已保存的离线素材</h2><span class="muted" id="offline-count">0 篇已保存</span></div><button class="ghost-button" id="clear-offline-btn">清空离线素材</button></div><div id="offline-list" class="material-list"></div></div>
+      </section>
+
+      <section class="page-view hidden" id="page-updates">
+        <div class="page-title-row"><div><div class="eyebrow">AUTOMATED DAILY REVIEW</div><h1>每日更新任务</h1><p>通过 RSS / Atom 来源检查新文章，去重后整理入库；启动程序期间可按设定时间自动执行。</p></div><div class="update-clock">07<span>:</span>30</div></div>
+        <div class="update-summary"><div class="update-status-icon">↻</div><div class="update-summary-copy"><strong id="update-summary-title">更新任务尚未运行</strong><p id="update-summary-desc">配置可访问的 RSS/Atom 地址与 AI 服务后，即可启动自动整理。</p><small id="update-last-run">尚无运行记录</small></div><div class="update-summary-actions"><button class="ghost-button" id="download-report-btn">下载今日整理文档 ⇩</button><button class="primary-button" id="run-update-btn">立即检查更新 <span>↗</span></button></div></div>
+        <div class="update-layout"><div class="panel source-panel"><div class="panel-heading"><div><div class="section-kicker">SOURCE CHANNELS</div><h2>关注的数据来源</h2></div><span class="tag tag-muted" id="source-enabled-tag">0 个已启用</span></div><div id="source-list" class="source-list"></div><div class="config-hint"><span>ⓘ</span><div><b>如何启用自动更新</b><p>在应用目录编辑 <code>config.json</code>，为每个来源填写可访问的 RSS/Atom 地址并设为启用；再配置兼容 OpenAI 的 AI 接口与模型名。保存后点击“立即检查更新”。</p></div></div></div>
+          <div class="panel update-log-panel"><div class="panel-heading"><div><div class="section-kicker">UPDATE WORKFLOW</div><h2>任务流程</h2></div></div><div class="workflow"><div class="workflow-item"><span class="workflow-number">01</span><div><b>抓取来源</b><p>读取已启用来源的 RSS / Atom 条目。</p></div></div><div class="workflow-item"><span class="workflow-number">02</span><div><b>校验与去重</b><p>校验发布日期，按原文地址去重。</p></div></div><div class="workflow-item"><span class="workflow-number">03</span><div><b>AI 主题整理</b><p>生成核心观点、论证结构、短句与写作角度。</p></div></div><div class="workflow-item"><span class="workflow-number">04</span><div><b>复核后入库</b><p>未配置 AI 或整理不完整的内容将进入待整理区。</p></div></div></div><div class="update-log" id="update-log"><span class="log-dot"></span> 系统等待首次运行。</div></div></div>
+        <div class="footer-note">注意：定时任务依赖本地程序持续运行、电脑保持开机且网络可用。来源站点不一定提供 RSS；请使用有权限且稳定的订阅地址。默认不会自动保存受版权保护的原文全文，原文全文字段可用于录入自有或获授权内容。</div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="移动端主导航">
+    <button data-page="home" class="mobile-nav-item active"><span>⌂</span><small>首页</small></button>
+    <button data-page="topics" class="mobile-nav-item"><span>▦</span><small>主题</small></button>
+    <button data-page="archive" class="mobile-nav-item"><span>▤</span><small>归档</small></button>
+    <button data-page="favorites" class="mobile-nav-item"><span>♡</span><small>收藏</small></button>
+    <button data-page="offline" class="mobile-nav-item"><span>⇩</span><small>离线</small></button>
+    <button data-page="updates" class="mobile-nav-item"><span>↻</span><small>更新</small></button>
+  </nav>
+
+  <div class="modal-backdrop hidden" id="detail-modal"><article class="detail-dialog"><button class="modal-close" data-close="detail-modal" aria-label="关闭">×</button><div id="detail-content"></div></article></div>
+  <div class="modal-backdrop hidden" id="editor-modal"><article class="editor-dialog"><div class="modal-heading"><div><div class="eyebrow">MATERIAL EDITOR</div><h2 id="editor-title">新增学习素材</h2><p>按字段整理，便于后续检索与复习。</p></div><button class="modal-close" data-close="editor-modal" aria-label="关闭">×</button></div>
+    <form id="material-form"><input type="hidden" id="edit-id"/><div class="form-grid"><label class="field full">素材标题 <em>*</em><input required id="f-title" placeholder="填写文章或讲话标题"/></label><label class="field">栏目 / 作者<input id="f-author" placeholder="如：人民时评、评论员观察"/></label><label class="field">发布日期 <em>*</em><input required type="date" id="f-date"/></label><label class="field">来源名称<input id="f-source" placeholder="如：人民日报、求是网"/></label><label class="field">原文来源（URL）<input id="f-url" type="url" placeholder="https://…（纯文本保存）"/></label><label class="field full">核心观点概括<textarea id="f-core" rows="2" placeholder="用一两句话概括文章的核心主张"></textarea></label><label class="field full">好词好句 / 金句摘录<textarea id="f-quotes" rows="4" placeholder="每行一条短句或关键词"></textarea><small>建议摘录短句并注明来源，避免大段复制原文。</small></label><label class="field full">论证结构 / 框架<textarea id="f-structure" rows="2" placeholder="如：提出问题—分析原因—提出对策"></textarea></label><div class="field full"><span class="field-label">申论主题标签（可多选）</span><div class="topic-checkboxes" id="editor-topic-checkboxes"></div></div><label class="field full">可用于申论的写作角度<textarea id="f-angles" rows="3" placeholder="每行一个角度，至少整理 3 个"></textarea></label><label class="field full">原文摘要（正文要点）<textarea id="f-summary" rows="3" placeholder="概括主要事实、举措、成效与问题"></textarea></label><label class="field full">原文全文<textarea id="f-content" rows="5" placeholder="仅录入自有或已获授权的正文内容；系统默认不自动保存网络文章全文"></textarea></label><div class="field full status-field"><label class="check-label"><input type="checkbox" id="f-draft"/> 保存为待整理素材</label><span class="form-note">发布日期不得晚于今天</span></div></div><div class="form-actions"><button type="button" class="ghost-button" data-close="editor-modal">取消</button><button type="submit" class="primary-button" id="save-material-btn">保存素材</button></div></form>
+  </article></div>
+  <div class="modal-backdrop hidden" id="auth-modal"><article class="auth-dialog"><button class="modal-close" data-close="auth-modal" aria-label="关闭">×</button><div class="auth-brand">申</div><div class="eyebrow">PERSONAL STUDY SPACE</div><h2 id="auth-heading">登录素材库</h2><p class="auth-intro">登录后即可跨页面管理你的收藏清单。</p><form id="auth-form"><label class="field">用户名<input id="auth-username" autocomplete="username" required minlength="2" placeholder="输入用户名"/></label><label class="field">密码<input id="auth-password" type="password" autocomplete="current-password" required minlength="6" placeholder="至少 6 位密码"/></label><div class="auth-error" id="auth-error"></div><button type="submit" class="primary-button full-button" id="auth-submit">登录</button></form><button class="auth-switch" id="auth-switch">还没有账号？<b>创建账号</b></button><div class="auth-footnote">云端部署后，同一账号可在 iPad、手机和电脑间同步收藏。请勿使用重要网站的相同密码。</div></article></div>
+  <div class="toast" id="toast" role="status"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden />
+  <script src="/app.js" defer></script>
+</body>
+</html>
